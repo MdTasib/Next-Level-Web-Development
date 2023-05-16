@@ -24,7 +24,7 @@ class Teacher extends Person {
     }
 }
 const student1 = new Student("Student", 21, "Chittagong");
-student1.makeSleep(8);
+console.log(student1.makeSleep(8));
 const teacher1 = new Teacher("Teacher", 30, "Dhaka", "head teacher");
-teacher1.makeSleep(6);
-teacher1.takeClass(3);
+console.log(teacher1.makeSleep(6));
+console.log(teacher1.takeClass(3));
