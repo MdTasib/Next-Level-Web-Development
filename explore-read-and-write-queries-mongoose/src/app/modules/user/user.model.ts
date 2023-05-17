@@ -1,62 +1,73 @@
 import { Schema, model } from "mongoose";
-import { IUser } from "./user.interface";
+import { IUser, IUserMethods, UserModel } from "./user.interface";
 
-const userSchema = new Schema<IUser>({
-    id: {
-        type: String,
-        required: true,
-        unique: true,
-    },
-    role: {
-        type: String,
-        required: true,
-    },
-    password: {
-        type: String,
-        required: true,
-    },
-    name: {
-        firstName: {
-            type: String,
-            required: true,
-        },
-        middleName: {
-            type: String
-        },
-        lastName: {
-            type: String,
-            required: true,
-        }
-    },
-    dateOfBirth: {
-        type: String,
-    },
-    gender: {
-        type: String,
-        required: true,
-        enum: ["male", "female"]
-    },
-    email: {
-        type: String
-    },
-    contactNo: {
-        type: String,
-        required: true,
-    },
-    emergencyContactNo: {
-        type: String,
-        required: true,
-    },
-    presentAddress: {
-        type: String,
-        required: true,
-    },
-    permanentAddress: {
-        type: String,
-        required: true,
-    }
+const userSchema = new Schema<IUser, UserModel, IUserMethods>({
+	id: {
+		type: String,
+		required: true,
+		unique: true,
+	},
+	role: {
+		type: String,
+		required: true,
+	},
+	password: {
+		type: String,
+		required: true,
+	},
+	name: {
+		firstName: {
+			type: String,
+			required: true,
+		},
+		middleName: {
+			type: String,
+		},
+		lastName: {
+			type: String,
+			required: true,
+		},
+	},
+	dateOfBirth: {
+		type: String,
+	},
+	gender: {
+		type: String,
+		required: true,
+		enum: ["male", "female"],
+	},
+	email: {
+		type: String,
+	},
+	contactNo: {
+		type: String,
+		required: true,
+	},
+	emergencyContactNo: {
+		type: String,
+		required: true,
+	},
+	presentAddress: {
+		type: String,
+		required: true,
+	},
+	permanentAddress: {
+		type: String,
+		required: true,
+	},
+});
+
+userSchema.static("getAdminUsers", async function getAdminUsers(): Promise<
+	IUser[]
+> {
+	const admins = await this.find({ role: "admin" });
+	return admins;
+});
+
+userSchema.method("fullname", function fullname() {
+	return this.name.firstName + " " + this.name.lastName;
 });
 
 // model
-const User = model<IUser>("User", userSchema);
+const User = model<IUser, UserModel>("User", userSchema);
 export default User;
