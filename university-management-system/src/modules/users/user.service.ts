@@ -3,7 +3,9 @@ import { IUser } from './user.interface'
 import { User } from './user.model'
 import { generateUserId } from './user.utils'
 
-const createUser = async (payload: IUser): Promise<IUser | null> => {
+export const createUserService = async (
+  payload: IUser
+): Promise<IUser | null> => {
   // auto generated incremental id
   const id = await generateUserId()
   payload.id = id
@@ -19,8 +21,4 @@ const createUser = async (payload: IUser): Promise<IUser | null> => {
   }
 
   return user
-}
-
-export default {
-  createUser,
 }
