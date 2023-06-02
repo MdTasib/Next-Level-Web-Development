@@ -8,12 +8,12 @@ const globalErrorHanlder = (
 ) => {
   res.status(400).json({ errorta: err })
 
-  //   res.status().json({
-  //     success: false,
-  //     message,
-  //     errorMessages,
-  //     stack: config.node_env !== 'production' ? err?.stack : undefined,
-  //   })
+  res.status().json({
+    success: false,
+    message,
+    errorMessages,
+    stack: config.node_env !== 'production' ? err?.stack : undefined,
+  })
 
   next()
 }
