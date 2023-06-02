@@ -9,6 +9,11 @@
             "date": 1685636764493,
             "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\UMS-2023-06-01-22-error.log",
             "hash": "1aef687faa6b7608981b6a30760b20ae4ac4141348a24e8d379a73de7138426f"
+        },
+        {
+            "date": 1685707705717,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\UMS-2023-06-02-18-error.log",
+            "hash": "511e963d01aee4b3ff28295d3eba3942c64aabb76825699a33b439598eede673"
         }
     ],
     "hashType": "sha256"
