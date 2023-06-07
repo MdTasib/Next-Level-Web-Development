@@ -1,0 +1,24 @@
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:17:04.965Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:17:05.117Z'
+}
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:23:23.978Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:23:24.005Z'
+}
