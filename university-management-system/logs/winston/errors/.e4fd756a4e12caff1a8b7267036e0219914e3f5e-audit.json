@@ -29,6 +29,16 @@
             "date": 1686199886300,
             "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\UMS-2023-06-08-10-error.log",
             "hash": "007d2cdf98bcf8c9bfe9586f7edf5173db937b15b6ed1353fc304806e6592857"
+        },
+        {
+            "date": 1686200877201,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\UMS-2023-06-08-11-error.log",
+            "hash": "c2fda8bb297b54b99c0426771985901da800791ee6a330f504f5466a497161d3"
+        },
+        {
+            "date": 1686204223637,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\UMS-2023-06-08-12-error.log",
+            "hash": "9ff5d8785cb0a129a490177df115fb24b5d80e9948f17b4b148a11d13605a701"
         }
     ],
     "hashType": "sha256"
