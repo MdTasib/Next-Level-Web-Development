@@ -22,3 +22,63 @@
   label: 'UMS',
   timestamp: '2023-06-07T10:23:24.005Z'
 }
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:23:58.361Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:23:58.381Z'
+}
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:25:45.319Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:25:45.339Z'
+}
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:33:07.413Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:33:07.438Z'
+}
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:34:41.950Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:34:41.966Z'
+}
+{
+  message: '🛢 Database connection successful',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:35:11.478Z'
+}
+{
+  message: 'Server is  listening on port 5000',
+  level: 'info',
+  label: 'UMS',
+  timestamp: '2023-06-07T10:35:11.511Z'
+}
