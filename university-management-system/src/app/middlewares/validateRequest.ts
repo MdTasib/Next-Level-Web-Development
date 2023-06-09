@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from 'express'
-import { AnyZodObject } from 'zod'
+import { NextFunction, Request, Response } from 'express';
+import { AnyZodObject } from 'zod';
 
 const validateRequest =
   (schema: AnyZodObject) =>
@@ -10,25 +10,11 @@ const validateRequest =
         query: req.query,
         params: req.params,
         cookies: req.cookies,
-      })
-      return next()
+      });
+      return next();
     } catch (error) {
-      next(error)
+      next(error);
     }
-  }
+  };
 
-// const validateRequest: RequestHandler = async (req, res, next) => {
-//   try {
-//     const { user } = req.body
-//     const result = await UserService.createUser(user)
-
-//     res
-//       .status(200)
-//       .json({ success: true, data: result, status: 'create user successfully' })
-//   } catch (err) {
-//     // res.json({ status: 'faield to create user', success: false })
-//     next(err)
-//   }
-// }
-
-export default validateRequest
+export default validateRequest;

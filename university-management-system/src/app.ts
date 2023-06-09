@@ -1,26 +1,25 @@
-import express, { Application, Request, Response } from 'express'
-import cors from 'cors'
-import globalErrorHanlder from './app/middlewares/globalErrorHandler'
-import { UserRoutes } from './app/modules/user/user.route'
+import cors from 'cors';
+import express, { Application } from 'express';
+import globalErrorHandler from './app/middlewares/globalErrorHandler';
+import { AcademicSemesterRoutes } from './app/modules/academicSemester/academicSemester.route';
+import { UserRoutes } from './app/modules/user/user.route';
+const app: Application = express();
 
-const app: Application = express()
+app.use(cors());
 
-// using cors
-app.use(cors())
+//parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// parse data
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use('/api/v1/users/', UserRoutes);
+app.use('/api/v1/academic-semesters', AcademicSemesterRoutes);
 
-// APPLICATION ROUTE
-app.use('/api/v1/users', UserRoutes)
+//Testing
+// app.get('/', async (req: Request, res: Response, next: NextFunction) => {
+//   throw new Error('Testing Error logger')
+// })
 
-// TESTING ROUTE
-app.get('/', async (req: Request, res: Response) => {
-  res.send('Hello, World!')
-})
+//global error handler
+app.use(globalErrorHandler);
 
-// GLOBAL ERROR HANDLER
-app.use(globalErrorHanlder)
-
-export default app
+export default app;

@@ -39,6 +39,21 @@
             "date": 1686204223626,
             "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\success\\UMS-2023-06-08-12-success.log",
             "hash": "510450a9735b0bc0e5913aac2c7bcad8609937cae6f2831605bd7d89f46ea778"
+        },
+        {
+            "date": 1686228228361,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\success\\UMS-2023-06-08-18-success.log",
+            "hash": "0b3ecbf405da5ffee165eddb0915904ab23422acc59a4fa015c2096c46a1b0d3"
+        },
+        {
+            "date": 1686239783781,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\success\\UMS-2023-06-08-21-success.log",
+            "hash": "e3291cd2f0dd421aea6eda20a9f16f637970cff9eebb8bd93011db0b731fe8ed"
+        },
+        {
+            "date": 1686240001921,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\success\\UMS-2023-06-08-22-success.log",
+            "hash": "4c27e7407824ce27d6dd60293b38f8c1c4bc99da5f95088497802606d0ed2940"
         }
     ],
     "hashType": "sha256"
