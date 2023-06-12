@@ -8,6 +8,7 @@ import pick from '../../../shared/pick';
 import { paginationFields } from '../../../constants/pagination';
 import { academicSemesterFilterableFields } from './academicSemester.constant';
 
+// CREATE SEMESTER
 const createSemester = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const { ...academicSemesterData } = req.body;
@@ -25,6 +26,7 @@ const createSemester = catchAsync(
   }
 );
 
+// GET SEMESTERS
 const getAllSemesters = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     // SEARCHING
@@ -48,7 +50,25 @@ const getAllSemesters = catchAsync(
   }
 );
 
+// GET SINGLE SEMESTER
+const getSingleSemester = catchAsync(
+  async (req: Request, res: Response, next: NextFunction) => {
+    const id = req.params.id;
+
+    const result = await AcademicSemesterService.getSingleSemester(id);
+
+    sendResponse<IAcademicSemester>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Semesters retrieved successfully!',
+      data: result,
+    });
+    next();
+  }
+);
+
 export const AcademicSemesterController = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
 };

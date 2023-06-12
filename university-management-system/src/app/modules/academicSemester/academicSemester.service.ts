@@ -14,6 +14,7 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 import { IGenericResponse } from '../../../interfaces/common';
 import { paginationHelper } from '../../../helpers/paginationHelper';
 
+// CREATE SEMESTER
 const createSemester = async (
   payload: IAcademicSemester
 ): Promise<IAcademicSemester> => {
@@ -25,6 +26,7 @@ const createSemester = async (
   return result;
 };
 
+// GET SEMESTER
 const getAllSemesters = async (
   filters: IAcademicSemesterFilters,
   paginationOptions: IPaginationOptions
@@ -91,7 +93,10 @@ const getAllSemesters = async (
     sortConditions[sortBy] = sortOrder;
   }
 
-  const result = await AcademicSemester.find({ $and: andConditions })
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await AcademicSemester.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
@@ -108,7 +113,16 @@ const getAllSemesters = async (
   };
 };
 
+// GET A SINGLE SEMESTER
+const getSingleSemester = async (
+  id: string
+): Promise<IAcademicSemester | null> => {
+  const result = await AcademicSemester.findById(id);
+  return result;
+};
+
 export const AcademicSemesterService = {
   createSemester,
   getAllSemesters,
+  getSingleSemester,
 };
