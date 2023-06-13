@@ -74,6 +74,11 @@
             "date": 1686586088441,
             "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\phu-2023-12-06-22-error.log",
             "hash": "8d3c2c05ccb7e6fccea9660ef0cbd402cc2b1c5a4811fdf0d6a6707f27e144ca"
+        },
+        {
+            "date": 1686636448715,
+            "name": "F:\\Next-Level-Web-Development\\university-management-system\\logs\\winston\\errors\\phu-2023-13-06-12-error.log",
+            "hash": "b818964f14298aaec2d3ed118090ed6e50f511ede7435a519935dda3473e3f88"
         }
     ],
     "hashType": "sha256"
