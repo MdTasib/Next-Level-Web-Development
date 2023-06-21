@@ -3,7 +3,10 @@ import express, { Application, NextFunction, Request, Response } from 'express';
 import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import routes from './app/routes';
 import httpStatus from 'http-status';
-import { generateStudentId } from './app/modules/user/user.utils';
+import {
+  generateFacultyId,
+  generateStudentId,
+} from './app/modules/user/user.utils';
 const app: Application = express();
 
 app.use(cors());
@@ -39,7 +42,7 @@ const academicSemester = {
 };
 
 const testId = async () => {
-  const testId = await generateStudentId(academicSemester);
+  const testId = await generateFacultyId();
   console.log(testId);
 };
 
